@@ -6,6 +6,8 @@
       - [System-Assigned](#system-assigned)
       - [User-Assigned](#user-assigned)
     - [Difference Between Managed Identities](#difference-between-managed-identities)
+    - [How to use Managed Identity](#how-to-use-managed-identity)
+    - [Azure services that supports manged identity](#azure-services-that-supports-manged-identity)
 
 ### Azure Managed Identity
 - **Managed identities** provide an *automatically managed identity* in Azure Active Directory for applications to use when connecting to resources that support Azure Active Directory (Azure AD) authentication.
