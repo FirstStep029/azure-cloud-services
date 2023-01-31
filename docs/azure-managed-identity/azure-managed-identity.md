@@ -44,3 +44,15 @@
 | Creation | Created as part of resource | Created as a stand-alone resource |
 | Life Cycle | Shared life cycle with the Azure resource that the managed identity is created with. When the parent resource is deleted, the managed identity is deleted as well. | Independent life cycle. Must be explicitly deleted. |
 | Sharing Across Azure Resources | Can’t be shared. It can only be associated with a single Azure resource. | Can be shared. The same user-assigned managed identity can be associated with more than one Azure resource. |
+
+
+### How to use Managed Identity
+- Create a managed identity in Azure. *(You can choose between system-assigned managed identity or user-assigned managed identity)*
+- When using a user-assigned managed identity,
+  - Assign the managed identity to the "source" Azure Resource **i.e. Virtual Machine, Azure Logic App or an Azure Web App**.
+  - Authorize the managed identity to have access to the "target" service.
+- When using a system-assigned identity,
+  - Authorize the managed identity to have access to the "target" service.
+
+  ### Azure services that supports manged identity
+  - Managed identities for Azure resources can be used to authenticate to services that support Azure AD authentication. [see services that support managed identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-status)
