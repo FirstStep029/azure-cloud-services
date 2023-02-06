@@ -1,10 +1,13 @@
 # Create new Azure Data Factory
 
 ### Table Of Contents
-- [Pre-Requisite](#1-pre-requisite)
-- [Install Azure CLI](#2-install-azure-cli)
-- [AZ login](#3-az-login)
-- [Create Data Factory](#4-create-data-factory)
+- [Create new Azure Data Factory](#create-new-azure-data-factory)
+    - [Table Of Contents](#table-of-contents)
+    - [1. Pre-Requisite](#1-pre-requisite)
+      - [2. Install Azure CLI](#2-install-azure-cli)
+      - [3. AZ Login](#3-az-login)
+      - [4. Create Data Factory](#4-create-data-factory)
+    - [Reference:](#reference)
 
 ### 1. Pre-Requisite
 - As we know that Subscription & Resource Group are two mandatory requirements in-order to create any resource in Azure Cloud Service, we assume that we have already these created.
@@ -21,7 +24,7 @@ $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/
 - Verify your installation by running ```az --version``` command once after installation completed. you will get below result.
 
 <p align="center">
-  <img width="702" height="334" src="https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Resource%20Creation%20-%20%5BCLI%5D/images/install-azure-cli-on-windows.png?raw=true">
+  <img width="702" height="334" src="docs/Resource%20Creation%20-%20%5BCLI%5D/images/install-azure-cli-on-windows.png?raw=true">
 </p>
 
 #### 3. AZ Login
@@ -60,7 +63,7 @@ az login --service-principal -u <app-id> -p <password-or-cert> --tenant <tenant>
 - Once after successful login, you will get below screen as output.
 
 <p align="center">
-  <img width="1285" height="258" src="https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Resource%20Creation%20-%20%5BCLI%5D/images/az-login-windows.png?raw=true">
+  <img width="1285" height="258" src="docs/Resource%20Creation%20-%20%5BCLI%5D/images/az-login-windows.png?raw=true">
 </p>
 
 - Authenticate using Managed Identity. [Log in using a VM's system-assigned managed identity]   
