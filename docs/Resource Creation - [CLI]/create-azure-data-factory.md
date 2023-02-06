@@ -24,7 +24,7 @@ $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/
 - Verify your installation by running ```az --version``` command once after installation completed. you will get below result.
 
 <p align="center">
-  <img width="702" height="334" src="docs/Resource%20Creation%20-%20%5BCLI%5D/images/install-azure-cli-on-windows.png?raw=true">
+  <img width="702" height="334" src="https://github.com/FirstStep029/azure-cloud-services/blob/master/docs/Resource%20Creation%20-%20%5BCLI%5D/images/install-azure-cli-on-windows.png?raw=true">
 </p>
 
 #### 3. AZ Login
@@ -63,7 +63,7 @@ az login --service-principal -u <app-id> -p <password-or-cert> --tenant <tenant>
 - Once after successful login, you will get below screen as output.
 
 <p align="center">
-  <img width="1285" height="258" src="docs/Resource%20Creation%20-%20%5BCLI%5D/images/az-login-windows.png?raw=true">
+  <img width="1285" height="258" src="https://github.com/FirstStep029/azure-cloud-services/blob/master/docs/Resource%20Creation%20-%20%5BCLI%5D/images/az-login-windows.png?raw=true">
 </p>
 
 - Authenticate using Managed Identity. [Log in using a VM's system-assigned managed identity]   
