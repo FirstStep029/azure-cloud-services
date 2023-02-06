@@ -1,8 +1,6 @@
 # Create new Azure Data Factory
 
-### Table Of Contents
 - [Create new Azure Data Factory](#create-new-azure-data-factory)
-    - [Table Of Contents](#table-of-contents)
     - [1. Pre-Requisite](#1-pre-requisite)
       - [2. Install Azure CLI](#2-install-azure-cli)
       - [3. AZ Login](#3-az-login)
@@ -14,7 +12,7 @@
 - An Service Principal must be created and assigned with required role & permission at the Resource Group (level) which we are going to use for the deployment.
 
 #### 2. Install Azure CLI
-- Install Azure CLI in Azure MV [CICD] (or) local machine. Run the below command to download & install Azure CLI into windows machine
+- Install Azure CLI in Azure VM [CICD] (or) local machine. Run the below command to download & install Azure CLI into windows machine
 ```
 $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
 ```
