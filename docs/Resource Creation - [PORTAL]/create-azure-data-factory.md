@@ -1,12 +1,13 @@
 # Create new Azure Data Factory
 
-### Table Of Contents
-- [Basics](#basics)
-- [Git Configuration](#git-configuration)
-- [Networking](#networking)
-- [Advanced](#advanced)
+- [Create new Azure Data Factory](#create-new-azure-data-factory)
+    - [Basics](#basics)
+    - [Git Configuration](#git-configuration)
+    - [Networking](#networking)
+    - [Advanced](#advanced)
+    - [Reference:](#reference)
 
-### Basics:
+### Basics
 - All the Properties & Configurations inside basic tab is mandatory.
 - Config & Props:
     - **Subscription:** You must choose an existing & active azure subscription, Since each ADF must be created inside an subscription.
@@ -14,7 +15,7 @@
     - **Name:** You must give an unique name as per the naming convention [guidence](https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Best%20Practice%20%26%20Recommendations.md#11-data-factory) provided by Microsoft.
     - **Region:** You must choose which region that ADF needs to be deployed. More details on Region and other associated properties can be found [here](https://azure.microsoft.com/en-in/global-infrastructure/geographies/#geographies)
 
-### Git Configuration:
+### Git Configuration
 - ADF can be easily integrated with Git Repository. It currently supports 2 types of Git provider as listed below.
 - Git Repo Types:
     - Azure DevOps Git
@@ -64,5 +65,5 @@
 
 
 ### Reference:
-> [[ADF] - Naming Convention](https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Best%20Practice%20%26%20Recommendations.md#1-naming-convention)  
-> [[ADF] - Limitations](https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Limitations.md#limitations)  
+> [[ADF] - Naming Convention](docs/Best%20Practice%20%26%20Recommendations.md#1-naming-convention)  
+> [[ADF] - Limitations](docs/Limitations.md#limitations)  

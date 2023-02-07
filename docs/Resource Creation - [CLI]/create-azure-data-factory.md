@@ -116,5 +116,5 @@ az datafactory create --resource-group rg-firststep-devtest-001 --factory-name a
 
 
 ### Reference:
-> [[ADF] - Naming Convention](https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Best%20Practice%20%26%20Recommendations.md#1-naming-convention)  
-> [[ADF] - Limitations](https://github.com/FirstStep029/auzre-data-factory/blob/master/docs/Limitations.md#limitations)  
+> [[ADF] - Naming Convention](docs/Best%20Practice%20%26%20Recommendations.md#1-naming-convention)  
+> [[ADF] - Limitations](docs/Limitations.md#limitations)  
