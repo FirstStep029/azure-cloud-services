@@ -34,7 +34,14 @@ while ($name_exists_flag -eq $false) {
 
 # Create Blob Storage Account
 az storage account create --name $account_name --resource-group $blob_prop.'resource-group' --location $blob_prop.'location' --output none
+
 # az storage account create $arguments
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Blob Creation Success in RG: $($arguments['location']) with Name: '$($account_name)'"
+}
+
+# Logout of session
+az logout
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "Logout Session Successfull."
 }
