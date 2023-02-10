@@ -117,7 +117,7 @@ public-network-access=Enabled
 sku=Standard_RAGRS
 ```
 
-**  Main Code**
+**Main Code**
 ```powershell
 # Reads Properties file
 $blob_prop = ConvertFrom-StringData(Get-Content $PSScriptRoot/properties/create-blob-storage.properties -raw)
