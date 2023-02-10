@@ -3,6 +3,7 @@
 - [Create Azure Blob Storage using Azure CLI](#create-azure-blob-storage-using-azure-cli)
     - [1. Pre-Requisite](#1-pre-requisite)
     - [2. Create Storage Account](#2-create-storage-account)
+      - [2.1 Examples](#21-examples)
 
 
 ### 1. Pre-Requisite
@@ -92,3 +93,63 @@ az storage account create --name
 | GRS | Geo Redundant Storage | <ul><li>Intermediate option with failover capabilities in a secondary region.</li><li>Mostly Recommended for Backup Servers.</li></ul> |
 | ZRS | Zone Redundant Storage | <ul><li>Intermediate option with protection against datacenter-level failures.</li><li>Mostly Recommended for High availability [UAT/PreProd] scenarios.</li></ul> | 
 | GZRS | Geo-Zone Redundant Storage | <ul><li>Optimal data protection solution that includes the offering of both GRS & ZRS.</li><li>Mostly Recommended for High availability [PROD] scenarios.</li></ul> |
+
+#### 2.1 Examples
+- Create a storage account '**safsblbdevtesteastus2002**' in resource group '**rg-firststep-devtest-001**' in the EAST US2 region with locally redundant storage.
+```commandline
+az storage account create -n safsblbdevtesteastus2002 -g rg-firststep-devtest-001 -l eastus2 --sku Standard_LRS
+```
+- Create a storage account '**safsblbdevtesteastus2003**' in resource group '**rg-firststep-devtest-001**' in the eastus2 region with account-scoped encryption key enabled for Table Service.
+```commandline
+az storage account create -n safsblbdevtesteastus2003 -g rg-firststep-devtest-001 --kind StorageV2 -l eastus2 -t Account
+```
+
+- Fully Automated Script, All the required parameters were stored in Property file as shown below.
+
+**Property-File**
+```property
+name=safsblbdevtesteastus2
+resource-group=rg-firststep-devtest-001
+access-tier=Hot
+min-tls-version=TLS1_2
+location=eastus2
+public-network-access=Enabled
+sku=Standard_RAGRS
+```
+
+**Main Code**
+```commandline
+# Reads Properties file
+$blob_prop = ConvertFrom-StringData(Get-Content $PSScriptRoot/properties/create-blob-storage.properties -raw)
+
+# Prepare Inut Arguments for Creating BLOB Storage
+$arguments = @{} 
+foreach ($elem in $blob_prop.GetEnumerator()) {
+    if (($null -ne $elem.Value) -and ('' -ne $elem.Value)) {
+        $arguments.Add("-$($elem.Name)", $elem.Value)
+    } 
+}
+
+# # Login to Azure CLI
+az login --service-principal -u $env:AZURE_APP_ID -p $env:AZURE_APP_SECRET --tenant $env:AZURE_TENANT --output none
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "Azure Login Success"
+}
+
+# Check Storage Name is Valid
+$account_count=1
+$name_exists_flag=$false
+
+while ($name_exists_flag -eq $false) {
+    $account_name="$($arguments['-name'])$($account_count.ToString().PadLeft(3, "0"))"
+    $name_exists=az storage account check-name --name $account_name --output json | ConvertFrom-Json
+    $name_exists_flag=$name_exists.nameAvailable
+    $account_count++
+}
+
+# Create Blob Storage Account
+az storage account create --name $account_name --resource-group $blob_prop.'resource-group' --location $blob_prop.'location' --output none
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "Blob Creation Success in RG: $($arguments['location']) with Name: '$($account_name)'"
+}
+```
