@@ -14,7 +14,7 @@
 ### 2. Create Storage Account
 - In order to create new storage using azure cli, you can use the below command.
 
-```commandline
+```powershell
 az storage account create --name
                           --resource-group
                           [--access-tier {Cool, Hot, Premium}]
@@ -96,11 +96,11 @@ az storage account create --name
 
 #### 2.1 Examples
 - Create a storage account '**safsblbdevtesteastus2002**' in resource group '**rg-firststep-devtest-001**' in the EAST US2 region with locally redundant storage.
-```commandline
+```powershell
 az storage account create -n safsblbdevtesteastus2002 -g rg-firststep-devtest-001 -l eastus2 --sku Standard_LRS
 ```
 - Create a storage account '**safsblbdevtesteastus2003**' in resource group '**rg-firststep-devtest-001**' in the eastus2 region with account-scoped encryption key enabled for Table Service.
-```commandline
+```powershell
 az storage account create -n safsblbdevtesteastus2003 -g rg-firststep-devtest-001 --kind StorageV2 -l eastus2 -t Account
 ```
 
@@ -118,7 +118,7 @@ sku=Standard_RAGRS
 ```
 
 **  Main Code**
-```commandline
+```powershell
 # Reads Properties file
 $blob_prop = ConvertFrom-StringData(Get-Content $PSScriptRoot/properties/create-blob-storage.properties -raw)
 
