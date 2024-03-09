@@ -5,6 +5,17 @@
 - [Supported Connectors](#supported-connectors)
 - [Properties](#properties)
 
+#### Commit History
+```
+**Author:** First Step Azure Cloud Services
+**Created On:** 2024-03-09
+**Last Updated On:** 2024-03-09
+```
+| Change Date | Description |
+|-------------|-------------|
+| 2024-03-09 | File Creation |
+| 2024-03-10 | Completion of remaining properties. |
+
 ## Introduction
 - A delimited text file is a type of file format used to store tabular data, such as spreadsheet data, in a plain text format. In a delimited text file, each line typically represents a single row of data, and the values within each row are separated or delimited by a specific character, such as a comma (,), tab (\t), semicolon (;), or pipe (|). 
 - The most common types of delimited text files are comma-separated values (CSV) files, where commas are used to separate values, and tab-separated values (TSV) files, where tabs are used as the delimiter.
@@ -22,7 +33,7 @@
    -  Partitioning (or) Filtering
 
 > [!IMPORTANT]
-> Before you create a dataset, you must create a linked service to link your data store to the service. Linked services are much like connection strings, which define the connection information needed for the service to connect to external resources.
+> *Before you create a dataset, you must create a linked service to link your data store to the service. Linked services are much like connection strings, which define the connection information needed for the service to connect to external resources.*
 
 ## Delimited Dataset
 - In Azure Data Factory, a delimited text dataset refers to a dataset type that represents data stored in delimited text files, such as CSV (comma-separated values) or TSV (tab-separated values) files.
@@ -53,19 +64,24 @@ Linked Service | Specifies the Name of the Linked Servie that will be used. | Y 
 | File Path | Specifies the Location where the file is stored, For Blob Storage Connector it accepts below listed params: <ul><li>**Container:** Name of the Storage Container.</li><li>**Directory:** Complete file Path where the file is stored</li><li>**File Name:** Name of the File with its Extension, i.e,. `sample.csv`</li></ul> | Y | Free Text | NA |
 | Compression Type | The compression codec used to read/write text files. Allowed values are **bzip2, gzip, deflate, ZipDeflate, TarGzip, Tar, snappy, or lz4**. | N | Drop Down | not compressed |
 | Column Delimiter | The character(s) used to separate columns in a file. When the column delimiter is defined as empty string, which means no delimiter, the whole line is taken as a single column. You can consider to use a rare unprintable character that may not exist in your data. Currently Supported Delimiters are <ul><li>*Comma `,`*</li><li>*Semicolon `;`*</li><li>*Pipe `\|`*</li><li>*Tab `\t`*</li><li>*Start Of Heading `\u00001`*</li><li>*No Delimiter*</li></ul>| N | Drop Down | comma `,` |
-| Row Delimiter | The character(s) used to separate rows in a file. <ul><li>For Copy activity, the single character or "\r\n" used to separate rows in a file. </li><li>For Mapping data flow, the single or two characters used to separate rows in a file. </li></ul>Supported values are: <ul><li>Default `\r,\n or \r\n`</li><li>Line Feed `\n`</li><li>Carriage Return `\r`</li><li>No Delimiter</li></ul>| N | Drop Down | <ul><li>*Copy Activity:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\r\n"</li><li>*Mapping Dataflow:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\n"</li></ul>
+| Row Delimiter | The character(s) used to separate rows in a file. <ul><li>For Copy activity, the single character or "\r\n" used to separate rows in a file. </li><li>For Mapping data flow, the single or two characters used to separate rows in a file. </li></ul>Supported values are: <ul><li>Default `\r,\n or \r\n`</li><li>Line Feed `\n`</li><li>Carriage Return `\r`</li><li>No Delimiter</li></ul>| N | Drop Down | <ul><li>*Copy Activity:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\r\n"</li><li>*Mapping Dataflow:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\n"</li></ul> |
+| Encoding | | | |
+| Quote Character | | | |
+| Escape Character | | | |
+| First Row As Header | | | |
+| Null Value | | | |
 
 > [!IMPORTANT]
 > | Property | Importance |
 > |----------|------------|
-> | **Compression Type:** | Currently Copy activity doesn't support "snappy" & "lz4", and mapping data flow doesn't support "ZipDeflate", "TarGzip" and "Tar".|
-> | **Column Delimiter:** | Only one character is allowed as Column Delimiter.|
-> | **Row Delimiter:**| When the row delimiter is set to no delimiter (empty string), the column delimiter must be set as no delimiter (empty string) as well. Currently, row delimiter as empty string is only supported for mapping data flow but not Copy activity.|
+> | **Compression Type:** | *Currently Copy activity doesn't support "snappy" & "lz4", and mapping data flow doesn't support "ZipDeflate", "TarGzip" and "Tar".*|
+> | **Column Delimiter:** | *Only one character is allowed as Column Delimiter.*|
+> | **Row Delimiter:**| *When the row delimiter is set to no delimiter (empty string), the column delimiter must be set as no delimiter (empty string) as well. Currently, row delimiter as empty string is only supported for mapping data flow but not Copy activity.*|
 
 > [!NOTE]
 > | Property | Note |
 > |----------|------|
-> | **Column Delimiter** | Currently, column delimiter as empty string is only supported for mapping data flow but not Copy activity.|
+> | **Column Delimiter** | *Currently, column delimiter as empty string is only supported for mapping data flow but not Copy activity.*|
 
 
 
