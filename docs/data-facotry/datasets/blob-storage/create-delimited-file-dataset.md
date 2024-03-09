@@ -33,7 +33,9 @@
    -  Partitioning (or) Filtering
 
 > [!IMPORTANT]
-> - *Before you create a dataset, you must create a linked service to link your data store to the service. Linked services are much like connection strings, which define the connection information needed for the service to connect to external resources.*   
+> - *Before you create a dataset, you must create a linked service to link your data store to the service. Linked services are much like connection strings, which define the connection information needed for the service to connect to external resources.*
+
+> [!CAUTION]
 > - *Dataset name should start and end with letter or number.*  
 > - *Dataset name should only contain letters, numbers or underscores (_).*
 
