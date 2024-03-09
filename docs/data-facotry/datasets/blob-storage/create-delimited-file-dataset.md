@@ -65,11 +65,11 @@ Linked Service | Specifies the Name of the Linked Servie that will be used. | Y 
 | Compression Type | The compression codec used to read/write text files. Allowed values are **bzip2, gzip, deflate, ZipDeflate, TarGzip, Tar, snappy, or lz4**. | N | Drop Down | not compressed |
 | Column Delimiter | The character(s) used to separate columns in a file. When the column delimiter is defined as empty string, which means no delimiter, the whole line is taken as a single column. You can consider to use a rare unprintable character that may not exist in your data. Currently Supported Delimiters are <ul><li>*Comma `,`*</li><li>*Semicolon `;`*</li><li>*Pipe `\|`*</li><li>*Tab `\t`*</li><li>*Start Of Heading `\u00001`*</li><li>*No Delimiter*</li></ul>| N | Drop Down | comma `,` |
 | Row Delimiter | The character(s) used to separate rows in a file. <ul><li>For Copy activity, the single character or "\r\n" used to separate rows in a file. </li><li>For Mapping data flow, the single or two characters used to separate rows in a file. </li></ul>Supported values are: <ul><li>Default `\r,\n or \r\n`</li><li>Line Feed `\n`</li><li>Carriage Return `\r`</li><li>No Delimiter</li></ul>| N | Drop Down | <ul><li>*Copy Activity:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\r\n"</li><li>*Mapping Dataflow:* **Read:** ["\r\n", "\r", "\n"] **Write:** "\n"</li></ul> |
-| Encoding | | | |
-| Quote Character | | | |
-| Escape Character | | | |
-| First Row As Header | | | |
-| Null Value | | | |
+| Encoding | The encoding type used to read/write test files. Allowed values are as follows: "UTF-8","UTF-8 without BOM", "UTF-16", "UTF-16BE", "UTF-32", "UTF-32BE", "US-ASCII", "UTF-7", "BIG5", "EUC-JP", "EUC-KR", "GB2312", "GB18030", "JOHAB", "SHIFT-JIS", "CP875", "CP866", "IBM00858", "IBM037", "IBM273", "IBM437", "IBM500", "IBM737", "IBM775", "IBM850", "IBM852", "IBM855", "IBM857", "IBM860", "IBM861", "IBM863", "IBM864", "IBM865", "IBM869", "IBM870", "IBM01140", "IBM01141", "IBM01142", "IBM01143", "IBM01144", "IBM01145", "IBM01146", "IBM01147", "IBM01148", "IBM01149", "ISO-2022-JP", "ISO-2022-KR", "ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "ISO-8859-13", "ISO-8859-15", "WINDOWS-874", "WINDOWS-1250", "WINDOWS-1251", "WINDOWS-1252", "WINDOWS-1253", "WINDOWS-1254", "WINDOWS-1255", "WINDOWS-1256", "WINDOWS-1257", "WINDOWS-1258". | N | Drop Down | `UTF-8` |
+| Quote Character | The single character to quote column values if it contains column delimiter. When quoteChar is defined as empty string, it means there is no quote char and column value is not quoted, and escapeChar is used to escape the column delimiter and itself. | Drop Down | N | double quotes `"`|
+| Escape Character | The single character to escape quotes inside a quoted value. When escapeChar is defined as empty string, the quoteChar must be set as empty string as well, in which case make sure all column values don't contain delimiters.| Drop Down | N | backslash `\`|
+| First Row As Header | Specifies whether to treat/make the first row as a header line with names of columns. Allowed values are true and false. When first row as header is false, note UI data preview and lookup activity output auto generate column names as Prop_{n} (starting from 0)| Check Box| N | `false` |
+| Null Value | Specifies the string representation of null value. | Free Text | N | empty string `""`|
 
 > [!IMPORTANT]
 > | Property | Importance |
@@ -82,6 +82,7 @@ Linked Service | Specifies the Name of the Linked Servie that will be used. | Y 
 > | Property | Note |
 > |----------|------|
 > | **Column Delimiter** | *Currently, column delimiter as empty string is only supported for mapping data flow but not Copy activity.*|
+> | **Encoding** | Mapping data flow doesn't support UTF-7 encoding & UTF-8 encoding with Byte Order Mark (BOM). |
 
 
 
