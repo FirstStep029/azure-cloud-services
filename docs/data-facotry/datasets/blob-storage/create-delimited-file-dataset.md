@@ -82,7 +82,7 @@ Linked Service | Specifies the Name of the Linked Servie that will be used. | Y 
 > | Property | Note |
 > |----------|------|
 > | **Column Delimiter** | *Currently, column delimiter as empty string is only supported for mapping data flow but not Copy activity.*|
-> | **Encoding** | Mapping data flow doesn't support UTF-7 encoding & UTF-8 encoding with Byte Order Mark (BOM). |
+> | **Encoding** | *Mapping data flow doesn't support UTF-7 encoding & UTF-8 encoding with Byte Order Mark (BOM).* |
 
 
 
