@@ -14,7 +14,7 @@
 | Change Date | Description |
 |-------------|-------------|
 | 2024-03-09 | File Creation |
-| 2024-03-10 | Completion of remaining properties. |
+| 2024-03-10 | Completion of remaining properties on Source & Sink. |
 
 ## Introduction
 - A delimited text file is a type of file format used to store tabular data, such as spreadsheet data, in a plain text format. In a delimited text file, each line typically represents a single row of data, and the values within each row are separated or delimited by a specific character, such as a comma (,), tab (\t), semicolon (;), or pipe (|). 

@@ -11,3 +11,7 @@ This Repo contains Best Practices &amp; Recommendations related to Azure Cloud S
 - [azure-managed-identities](docs/azure-managed-identity/azure-managed-identity.md)
 - [azure-blob-storage](docs/azure-blob-storage/)
   - [SAS-token](docs/azure-blob-storage/sas-token/sas-token-complete-overview.md)
+- [data-factory](docs/data-facotry/)
+  - [datasets](docs/data-facotry/datasets/)
+    - [blob-storage](docs/data-facotry/datasets/blob-storage/)
+      - [create-delimited-text-dataset](docs/data-facotry/datasets/blob-storage/create-delimited-text-dataset.md)
