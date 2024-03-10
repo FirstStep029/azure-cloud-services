@@ -7,9 +7,9 @@
 
 #### Commit History
 ```
-**Author:** First Step Azure Cloud Services
-**Created On:** 2024-03-09
-**Last Updated On:** 2024-03-09
+Author: First Step Azure Cloud Services
+Created On: 2024-03-10
+Last Updated On: 2024-03-10
 ```
 | Change Date | Description |
 |-------------|-------------|
@@ -63,7 +63,7 @@
 ## Properties
 | Property | Description | Required | DataType | Default Value |
 |----------|-------------|----------|----------|---------------|
-Linked Service | Specifies the Name of the Linked Servie that will be used. | Y | DropDown | NA |
+| Linked Service | Specifies the Name of the Linked Servie that will be used. | Y | DropDown | NA |
 | File Path | Specifies the Location where the file is stored, For Blob Storage Connector it accepts below listed params: <ul><li>**Container:** Name of the Storage Container.</li><li>**Directory:** Complete file Path where the file is stored</li><li>**File Name:** Name of the File with its Extension, i.e,. `sample.csv`</li></ul> | Y | Free Text | NA |
 | Compression Type | The compression codec used to read/write text files. Allowed values are **bzip2, gzip, deflate, ZipDeflate, TarGzip, Tar, snappy, or lz4**. | N | Drop Down | not compressed |
 | Column Delimiter | The character(s) used to separate columns in a file. When the column delimiter is defined as empty string, which means no delimiter, the whole line is taken as a single column. You can consider to use a rare unprintable character that may not exist in your data. Currently Supported Delimiters are <ul><li>*Comma `,`*</li><li>*Semicolon `;`*</li><li>*Pipe `\|`*</li><li>*Tab `\t`*</li><li>*Start Of Heading `\u00001`*</li><li>*No Delimiter*</li></ul>| N | Drop Down | comma `,` |
