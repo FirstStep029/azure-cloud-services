@@ -40,7 +40,7 @@ Last Updated On: 2024-03-10
 > [!IMPORTANT]
 > - *Before you create a dataset, you must create a linked service to link your data store to the service. Linked services are much like connection strings, which define the connection information needed for the service to connect to external resources.*
 > - Currently ADF Supports *.xls* & *.xlsx* formats in Dataset.
-> *.xls* format is not supported while using **HTTP** dataset
+> - *.xls* format is not supported while using **HTTP** dataset
 
 > [!CAUTION]
 > - *Dataset name should start and end with letter or number.*  
