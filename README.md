@@ -15,3 +15,4 @@ This Repo contains Best Practices &amp; Recommendations related to Azure Cloud S
   - [datasets](docs/data-facotry/datasets/)
     - [blob-storage](docs/data-facotry/datasets/blob-storage/)
       - [create-delimited-text-dataset](docs/data-facotry/datasets/blob-storage/create-delimited-text-dataset.md)
+      - [create-excel-dataset](docs/data-facotry/datasets/blob-storage/create-excel-dataset.md)
