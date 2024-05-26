@@ -30,7 +30,7 @@ And made generally available for purchase at its Ignite conference on November 1
 Microsoft Fabric is built on a foundation of Software as a Service (SaaS). It combines both new and existing components from Power BI, Azure Synapse Analytics, Azure Data Factory, and more services into a unified environment. These components are then tailored into customized user experiences.
 
 <p align="center">
-  <img width="600" height="200" src=https://learn.microsoft.com/en-us/fabric/get-started/media/microsoft-fabric-overview/fabric-architecture.png#lightbox
+  <img width="600" height="300" src=https://learn.microsoft.com/en-us/fabric/get-started/media/microsoft-fabric-overview/fabric-architecture.png#lightbox
   ">
 </p>
 
